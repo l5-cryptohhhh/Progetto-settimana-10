@@ -1,0 +1,50 @@
+.city-search {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.city-search__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+
+.city-search__row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.city-search__input {
+  flex: 1;
+  min-height: 48px;
+  padding: 0 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.city-search__input::placeholder {
+  color: var(--ink-faint);
+}
+
+.city-search__input:focus-visible {
+  border-color: var(--accent);
+}
+
+.city-search__button {
+  min-height: 48px;
+  min-width: 44px;
+  padding: 0 1.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+  .city-search__row {
+    flex-direction: column;
+  }
+}

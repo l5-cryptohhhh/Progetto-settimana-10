@@ -1,0 +1,67 @@
+.weather-alert {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+}
+
+.weather-alert--sm {
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.weather-alert__badge {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: var(--danger);
+  color: var(--danger-ink);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  box-shadow: 0 10px 24px -10px color-mix(in oklch, var(--danger) 70%, transparent);
+  cursor: help;
+  animation: weather-alert-pulse 2.2s ease-in-out infinite;
+}
+
+.weather-alert--sm .weather-alert__badge {
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 0.7rem;
+}
+
+.weather-alert__popup {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  z-index: 10;
+  width: max-content;
+  max-width: 220px;
+  padding: 0.625rem 0.875rem;
+  border-radius: var(--radius-sm);
+  background: oklch(0.92 0.06 25);
+  color: oklch(0.32 0.14 25);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: left;
+  box-shadow: 0 12px 30px -12px color-mix(in oklch, var(--danger) 60%, transparent);
+}
+
+@keyframes weather-alert-pulse {
+  0%,
+  100% {
+    box-shadow: 0 10px 24px -10px color-mix(in oklch, var(--danger) 70%, transparent);
+  }
+  50% {
+    box-shadow: 0 10px 24px -10px color-mix(in oklch, var(--danger) 70%, transparent), 0 0 0 6px color-mix(in oklch, var(--danger) 25%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .weather-alert__badge {
+    animation: none;
+  }
+}

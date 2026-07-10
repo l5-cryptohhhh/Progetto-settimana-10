@@ -1,0 +1,28 @@
+.footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  padding-block: 2rem;
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.footer__brand {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.footer__note {
+  color: var(--ink-faint);
+  font-size: 0.875rem;
+}
+
+.footer__note a {
+  color: var(--ink-muted);
+}

@@ -1,0 +1,38 @@
+.detail-page {
+  padding-block: 3rem 4.5rem;
+  min-height: 60vh;
+}
+
+.detail-page__state {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+  color: var(--ink-muted);
+  padding-block: 3rem;
+}
+
+.detail-page__state a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.detail-page__top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.detail-page__top .current-weather {
+  width: 100%;
+  max-width: 480px;
+}
+
+.detail-page__secondary {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+  margin-inline: auto;
+}
